@@ -23,5 +23,4 @@ public class SignUpFeature extends BasePage {
 
     @FindBy(xpath = "//button[.='Sign up']")
     WebElement signUpButton;
-
 }
