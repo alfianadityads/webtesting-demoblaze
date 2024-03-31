@@ -1,6 +1,8 @@
 package pagesfactory;
 
 import context.TestContext;
+import pagesfactory.aboutus.AboutUsFeatureAction;
+import pagesfactory.aboutus.AboutUsFeatureValidation;
 import pagesfactory.addtocart.AddToCartFeatureAction;
 import pagesfactory.addtocart.AddToCartFeatureValidation;
 import pagesfactory.categories.CategoriesFeatureAction;
@@ -71,5 +73,17 @@ public class PageFactoryManager {
 
     public static CheckoutFeatureValidation getCheckoutFeatureValidation(TestContext context) {
         return checkoutFeatureValidation == null ? new CheckoutFeatureValidation(context) : checkoutFeatureValidation;
+    }
+
+//    About Us Feature
+    private static AboutUsFeatureAction aboutUsFeatureAction;
+    private static AboutUsFeatureValidation aboutUsFeatureValidation;
+
+    public static AboutUsFeatureAction getAboutUsFeatureAction(TestContext context) {
+        return aboutUsFeatureAction == null ? new AboutUsFeatureAction(context) : aboutUsFeatureAction;
+    }
+
+    public static AboutUsFeatureValidation getAboutUsFeatureValidation(TestContext context) {
+        return aboutUsFeatureValidation == null ? new AboutUsFeatureValidation(context) : aboutUsFeatureValidation;
     }
 }

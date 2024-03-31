@@ -23,6 +23,6 @@ public class LogInFeatureAction extends LogInFeature {
     }
 
     public void clickLoginButton() {
-        loginButton.click();
+        getWait().until(ExpectedConditions.elementToBeClickable(loginButton)).click();
     }
 }
