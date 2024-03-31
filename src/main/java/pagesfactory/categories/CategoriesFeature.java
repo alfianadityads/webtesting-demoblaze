@@ -12,7 +12,7 @@ public class CategoriesFeature extends BasePage {
         PageFactory.initElements(context.driver, this);
     }
 
-    @FindBy(xpath = "//a[.='Log in']")
+    @FindBy(xpath = "//a[.='Phones']")
     WebElement phonesMenuButton;
 
     @FindBy(xpath = "//a[.='Laptops']")
@@ -24,7 +24,7 @@ public class CategoriesFeature extends BasePage {
     @FindBy(css = "[src='imgs/Lumia_1520.jpg']")
     WebElement phoneProductValidations;
 
-    @FindBy(xpath = "//div[@id='tbodyid']/div[2]//img[@src='imgs/sony_vaio_5.jpg']")
+    @FindBy(xpath = "//a[.='MacBook air']")
     WebElement laptopProductValidations;
 
     @FindBy(css = "[src='imgs/apple_cinema.jpg']")

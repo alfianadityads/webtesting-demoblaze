@@ -1,6 +1,8 @@
 package pagesfactory;
 
 import context.TestContext;
+import pagesfactory.categories.CategoriesFeatureAction;
+import pagesfactory.categories.CategoriesFeatureValidation;
 import pagesfactory.login.LogInFeatureAction;
 import pagesfactory.login.LogInFeatureValidation;
 import pagesfactory.signup.SignUpFeatureAction;
@@ -29,5 +31,17 @@ public class PageFactoryManager {
 
     public static  LogInFeatureValidation getLogInFeatureValidation(TestContext context) {
         return logInFeatureValidation == null ? new LogInFeatureValidation(context) : logInFeatureValidation;
+    }
+
+//    Categories Feature
+    private static CategoriesFeatureAction categoriesFeatureAction;
+    private static CategoriesFeatureValidation categoriesFeatureValidation;
+
+    public static CategoriesFeatureAction getCategoriesFeatureAction(TestContext context) {
+        return categoriesFeatureAction == null ? new CategoriesFeatureAction(context) : categoriesFeatureAction;
+    }
+
+    public static CategoriesFeatureValidation getCategoriesFeatureValidation(TestContext context) {
+        return categoriesFeatureValidation == null ? new CategoriesFeatureValidation(context) : categoriesFeatureValidation;
     }
 }
