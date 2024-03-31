@@ -23,4 +23,7 @@ public class LogInFeature extends BasePage {
 
     @FindBy(xpath = "//button[.='Log in']")
     WebElement loginButton;
+
+    @FindBy(id = "nameofuser")
+    WebElement nameOfUser;
 }

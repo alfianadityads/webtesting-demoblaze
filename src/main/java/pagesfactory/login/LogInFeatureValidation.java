@@ -11,4 +11,8 @@ public class LogInFeatureValidation extends LogInFeature {
     public boolean isOnHomePage() {
         return getWait().until(ExpectedConditions.visibilityOf(loginMenuButton)).isDisplayed();
     }
+
+    public boolean nameOfUser() {
+        return getWait().until(ExpectedConditions.visibilityOf(nameOfUser)).isDisplayed();
+    }
 }
