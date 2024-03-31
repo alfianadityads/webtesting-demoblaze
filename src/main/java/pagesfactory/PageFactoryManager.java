@@ -13,6 +13,8 @@ import pagesfactory.contact.ContactFeatureAction;
 import pagesfactory.contact.ContactFeatureValidation;
 import pagesfactory.login.LogInFeatureAction;
 import pagesfactory.login.LogInFeatureValidation;
+import pagesfactory.logout.LogOutFeatureAction;
+import pagesfactory.logout.LogOutFeatureValidation;
 import pagesfactory.signup.SignUpFeatureAction;
 import pagesfactory.signup.SignUpFeatureValidation;
 
@@ -102,4 +104,14 @@ public class PageFactoryManager {
     }
 
 //    Log Out Feature
+    private static LogOutFeatureAction logOutFeatureAction;
+    private static LogOutFeatureValidation logOutFeatureValidation;
+
+    public static LogOutFeatureAction getLogOutFeatureAction(TestContext context) {
+        return logOutFeatureAction == null ? new LogOutFeatureAction(context) : logOutFeatureAction;
+    }
+
+    public static LogOutFeatureValidation getLogOutFeatureValidation(TestContext context) {
+        return logOutFeatureValidation == null ? new LogOutFeatureValidation(context) : logOutFeatureValidation;
+    }
 }
