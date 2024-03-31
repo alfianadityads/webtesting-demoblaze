@@ -1,6 +1,8 @@
 package pagesfactory;
 
 import context.TestContext;
+import pagesfactory.addtocart.AddToCartFeatureAction;
+import pagesfactory.addtocart.AddToCartFeatureValidation;
 import pagesfactory.categories.CategoriesFeatureAction;
 import pagesfactory.categories.CategoriesFeatureValidation;
 import pagesfactory.login.LogInFeatureAction;
@@ -43,5 +45,17 @@ public class PageFactoryManager {
 
     public static CategoriesFeatureValidation getCategoriesFeatureValidation(TestContext context) {
         return categoriesFeatureValidation == null ? new CategoriesFeatureValidation(context) : categoriesFeatureValidation;
+    }
+
+//    Add To Cart Feature
+    private static AddToCartFeatureAction addToCartFeatureAction;
+    private static AddToCartFeatureValidation addToCartFeatureValidation;
+
+    public static AddToCartFeatureAction getAddToCartFeatureAction(TestContext context) {
+        return addToCartFeatureAction == null ? new AddToCartFeatureAction(context) : addToCartFeatureAction;
+    }
+
+    public static AddToCartFeatureValidation getAddToCartFeatureValidation(TestContext context) {
+        return addToCartFeatureValidation == null ? new AddToCartFeatureValidation(context) : addToCartFeatureValidation;
     }
 }
