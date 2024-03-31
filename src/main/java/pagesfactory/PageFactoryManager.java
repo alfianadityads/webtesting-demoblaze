@@ -5,6 +5,8 @@ import pagesfactory.addtocart.AddToCartFeatureAction;
 import pagesfactory.addtocart.AddToCartFeatureValidation;
 import pagesfactory.categories.CategoriesFeatureAction;
 import pagesfactory.categories.CategoriesFeatureValidation;
+import pagesfactory.checkout.CheckoutFeatureAction;
+import pagesfactory.checkout.CheckoutFeatureValidation;
 import pagesfactory.login.LogInFeatureAction;
 import pagesfactory.login.LogInFeatureValidation;
 import pagesfactory.signup.SignUpFeatureAction;
@@ -57,5 +59,17 @@ public class PageFactoryManager {
 
     public static AddToCartFeatureValidation getAddToCartFeatureValidation(TestContext context) {
         return addToCartFeatureValidation == null ? new AddToCartFeatureValidation(context) : addToCartFeatureValidation;
+    }
+
+//    Checkout Feature
+    private static CheckoutFeatureAction checkoutFeatureAction;
+    private static CheckoutFeatureValidation checkoutFeatureValidation;
+
+    public static CheckoutFeatureAction getCheckoutFeatureAction(TestContext context) {
+        return checkoutFeatureAction == null ? new CheckoutFeatureAction(context) : checkoutFeatureAction;
+    }
+
+    public static CheckoutFeatureValidation getCheckoutFeatureValidation(TestContext context) {
+        return checkoutFeatureValidation == null ? new CheckoutFeatureValidation(context) : checkoutFeatureValidation;
     }
 }
