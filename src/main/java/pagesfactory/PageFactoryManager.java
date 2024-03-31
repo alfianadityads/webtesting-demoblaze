@@ -9,6 +9,8 @@ import pagesfactory.categories.CategoriesFeatureAction;
 import pagesfactory.categories.CategoriesFeatureValidation;
 import pagesfactory.checkout.CheckoutFeatureAction;
 import pagesfactory.checkout.CheckoutFeatureValidation;
+import pagesfactory.contact.ContactFeatureAction;
+import pagesfactory.contact.ContactFeatureValidation;
 import pagesfactory.login.LogInFeatureAction;
 import pagesfactory.login.LogInFeatureValidation;
 import pagesfactory.signup.SignUpFeatureAction;
@@ -86,4 +88,18 @@ public class PageFactoryManager {
     public static AboutUsFeatureValidation getAboutUsFeatureValidation(TestContext context) {
         return aboutUsFeatureValidation == null ? new AboutUsFeatureValidation(context) : aboutUsFeatureValidation;
     }
+
+//    Contact Feature
+    private static ContactFeatureAction contactFeatureAction;
+    private static ContactFeatureValidation contactFeatureValidation;
+
+    public static ContactFeatureAction getContactFeatureAction(TestContext context) {
+        return contactFeatureAction == null ? new ContactFeatureAction(context) : contactFeatureAction;
+    }
+
+    public static ContactFeatureValidation getContactFeatureValidation(TestContext context) {
+        return contactFeatureValidation == null ? new ContactFeatureValidation(context) : contactFeatureValidation;
+    }
+
+//    Log Out Feature
 }
