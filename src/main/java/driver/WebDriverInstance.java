@@ -12,7 +12,7 @@ public class WebDriverInstance {
         RemoteWebDriver webDriver = null;
         URL URL_ADDRESS;
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox", "--disable-dev-shm-usage", "--incognito", "--start-maximized");
+        options.addArguments("--no-sandbox", "--disable-dev-shm-usage", "--incognito", "--start-maximized", "--headless");
 
         if (isRunningOnHub) {
             try {
