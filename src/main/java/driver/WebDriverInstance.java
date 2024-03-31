@@ -25,7 +25,7 @@ public class WebDriverInstance {
             webDriver = new ChromeDriver(options);
         }
         assert webDriver != null;
-        webDriver.get("https://automationpanda.com/");
+        webDriver.get("https://www.demoblaze.com/index.html");
         return webDriver;
     }
 
