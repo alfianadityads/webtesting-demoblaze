@@ -6,7 +6,7 @@ Feature: Login to web
     Given user is already on the landing page
     When user clicks on the Log In menu button
 
-  @Postivie-Case
+  @Positive-Case
   Scenario: User login with valid account
     And input "useralfian1" as the Username  and input "useralfian1" as the Password for login
     Then user clicks the Log In button

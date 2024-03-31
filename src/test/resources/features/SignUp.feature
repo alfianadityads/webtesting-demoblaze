@@ -6,7 +6,7 @@ Feature: Sign Up to website
     Given user is already is on landing page
     When user click sign up menu button
 
-  @Postivie-Case
+  @Positive-Case
   Scenario: User register with unregistered username and password
     And input random username as the Username  and input "randomuser3421" as the Password
     Then user clicks the Sign up button
@@ -36,13 +36,13 @@ Feature: Sign Up to website
     Then user clicks the Sign up button
     And verification pop-up appears, indicating username and password field must be filled
 
-  @Postivie-Case
+  @Positive-Case
   Scenario: User register with combination of word, number, and special character on all valid username and password
     And input "useralfi@n1" as the Username  and input "useralfi@n1" as the Password
     Then user clicks the Sign up button
     And verification pop-up appears, indicating successful registration
 
-  @Postivie-Case
+  @Positive-Case
   Scenario: User register with combination upper case and lower case of word on all valid username and password
     And input "UserAlfian" as the Username  and input "UserAlfian" as the Password
     Then user clicks the Sign up button
